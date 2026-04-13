@@ -1,0 +1,5 @@
+metric,value,status,comment
+pipeline_status,blocked,warning,Phase 0 preflight failed due to missing tools and blocked outbound network.
+full_transcriptome_quantification,0,warning,No Salmon/Kallisto standard quantification completed in this environment.
+informative_isoform_reads,0,warning,No isoform-discriminating reads counted.
+preflight_report,zfp423_phase0_preflight_report.txt,warning,See detailed environment/network/tool checks.
