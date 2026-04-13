@@ -1,0 +1,2 @@
+accession,run,source_db,model_or_tissue,timepoint,condition,group_note,layout,read_length,status,note
+NA,NA,NA,NA,NA,NA,NA,NA,NA,not_processed,No raw FASTQ processing completed in this environment.

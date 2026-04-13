@@ -1,0 +1,2 @@
+accession,run,model_or_tissue,timepoint,condition,count_SZfp423,count_LZfp423,RPM_SZfp423,RPM_LZfp423,TPM_SZfp423,TPM_LZfp423,total_Zfp423,frac_SZfp423,frac_LZfp423,evidence_flag
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no_quantification

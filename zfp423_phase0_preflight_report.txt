@@ -1,0 +1,40 @@
+date_utc=2026-04-13T07:51:49Z
+host=Linux 14b03c948b14 6.12.47 #1 SMP Mon Oct 27 10:01:15 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+\n[tool_check]
+salmon=MISSING
+kallisto=MISSING
+STAR=MISSING
+samtools=MISSING
+fasterq-dump=MISSING
+prefetch=MISSING
+\n[network_check]
+https://ftp.sra.ebi.ac.uk -> HTTP_000
+https://www.ncbi.nlm.nih.gov -> HTTP_000
+http://archive.ubuntu.com/ubuntu -> HTTP_403
+\n[apt_check]
+apt_get_update_rc=100
+apt_get_update_tail:
+  403  Forbidden [IP: 172.30.2.211 8080]
+Err:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+  403  Forbidden [IP: 172.30.2.211 8080]
+Err:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+  403  Forbidden [IP: 172.30.2.211 8080]
+Ign:3 https://mise.jdx.dev/deb stable InRelease
+Ign:3 https://mise.jdx.dev/deb stable InRelease
+Err:3 https://mise.jdx.dev/deb stable InRelease
+  Invalid response from proxy: HTTP/1.1 403 Forbidden  content-length: 9  content-type: text/plain  date: Mon, 13 Apr 2026 07:51:49 GMT  server: envoy  connection: close     [IP: 172.30.2.211 8080]
+Reading package lists...
+E: The repository 'http://apt.llvm.org/noble llvm-toolchain-noble-20 InRelease' is no longer signed.
+E: Failed to fetch http://apt.llvm.org/noble/dists/llvm-toolchain-noble-20/InRelease  403  Forbidden [IP: 172.30.2.211 8080]
+E: The repository 'http://archive.ubuntu.com/ubuntu noble InRelease' is no longer signed.
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble/InRelease  403  Forbidden [IP: 172.30.2.211 8080]
+E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is no longer signed.
+E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  403  Forbidden [IP: 172.30.2.211 8080]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  403  Forbidden [IP: 172.30.2.211 8080]
+E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is no longer signed.
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  403  Forbidden [IP: 172.30.2.211 8080]
+E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is no longer signed.
+\n[conclusion]
+Outbound network to required bioinformatics endpoints is blocked (HTTP 403 via proxy).
+RNA-seq tools are missing and cannot be installed via apt in current network state.
+preflight_status=blocked
